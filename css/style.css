@@ -1,0 +1,426 @@
+/*******************
+Treehouse Project 3: Online Registration Form
+Author: Amir Talib
+Date: 26.03.2017 (dd.mm.year)
+*******************/
+
+
+/*********
+Global Declarations
+**********/
+
+h1, h2, h3, h4, legend {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+
+p, label {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: normal;
+    color: #577081;
+}
+
+form {
+    padding: 0;
+    margin: auto;
+}
+
+fieldset {
+    border: none;
+}
+
+input::-webkit-input-placeholder {
+    color: #bdc2c5 !important;
+}
+
+input:-moz-placeholder {
+    /* Firefox 18- */
+    color: #bdc2c5 !important;
+}
+
+input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #bdc2c5 !important;
+}
+
+input:-ms-input-placeholder {
+    color: #bdc2c5 !important;
+}
+
+input[type=checkbox] {
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(1);
+    /* IE */
+    -moz-transform: scale(1);
+    /* FF */
+    -webkit-transform: scale(1);
+    /* Safari and Chrome */
+    -o-transform: scale(1);
+    /* Opera */
+    padding: 10px;
+}
+
+input[type=radio] {
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(1);
+    /* IE */
+    -moz-transform: scale(1);
+    /* FF */
+    -webkit-transform: scale(1);
+    /* Safari and Chrome */
+    -o-transform: scale(1);
+    /* Opera */
+    padding: 10px;
+}
+
+
+/**********
+header
+**********/
+
+.header {
+    background: #2b3946;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: .65em;
+    margin-top: auto;
+    padding: 20px 0 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/**********
+Newsletter
+**********/
+
+.signupPitch {
+    border-bottom: 4px solid #000;
+    font-size: .45em;
+    margin: 0 auto 0 auto;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    text-align: center;
+    width: 272px;
+}
+
+.signupPitch h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.signupPitch p {
+    font-size: 2.15em;
+}
+
+
+/**********
+Contact Information
+**********/
+
+.contactInfo {
+    border-bottom: 2px solid #000;
+    margin: 5px auto 5px auto;
+    padding: 0;
+    width: 272px;
+}
+
+.contactInfo legend {
+    border-top: 2px solid #000;
+    font-size: 18px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.contactInfo label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding-top: 15px;
+}
+
+.nameInput {
+    background: #eff0f1;
+    font-size: 0.875em;
+    font-style: italic;
+    padding: 10px 0 10px 0;
+    text-align: right;
+}
+
+#fullName, #streetAdd, #city, input[type="text"], select {
+    border-radius: 4px;
+    border: 2px solid #eff0f1;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 0.875em;
+    margin: 8px 0;
+    outline: none;
+    padding: 15px 10px;
+    width: 100%;
+}
+
+#fullName:hover, #streetAdd:hover, #city:hover, input[type="text"]:hover, select:hover {
+    border: 2px solid #4e7d9a;
+    background: lightblue;
+}
+
+#fullName:focus, #streetAdd:focus, #city:focus, input[type="text"]:focus, select:focus {
+    border: 2px solid #4e7d9a;
+    background: lightyellow;
+}
+
+input[type="email"], select {
+    border-radius: 4px;
+    border: 2px solid #eff0f1;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 8px 0;
+    outline: none;
+    padding: 15px 10px;
+    width: 100%;
+}
+
+input[type="email"]:hover, select:hover {
+    background: lightblue;
+    border: 2px solid #4e7d9a;
+}
+
+input[type="email"]:focus, select:focus {
+    background: lightyellow;
+    border: 2px solid #4e7d9a;
+}
+
+input[type="tel"], select {
+    border-radius: 4px;
+    border: 2px solid #eff0f1;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 8px 0;
+    outline: none;
+    padding: 15px 10px;
+    width: 100%;
+}
+
+input[type="tel"]:hover, select:hover {
+    background: lightblue;
+    border: 2px solid #4e7d9a;
+}
+
+input[type="tel"]:focus, select:focus {
+    background: lightyellow;
+    border: 2px solid #4e7d9a;
+}
+
+select[name="state"] {
+    border-radius: 4px;
+    border: 2px solid #eff0f1;
+    box-sizing: border-box;
+    color: #ccc;
+    display: inline-block;
+    height: 50px;
+    margin: 8px 0;
+    padding: 15px 10px;
+    width: 100%;
+}
+
+option[selected="selected"] {
+    color: #ccc;
+}
+
+label:nth-of-type(7) {
+    padding-right: 100px;
+}
+
+#zipCode, input[type="text"], select {
+    background: #eff0f1;
+    border-radius: 4px;
+    border: 2px solid #eff0f1;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 0.875em;
+    margin: 8px 0 32px 0;
+    padding: 15px 10px;
+    width: 45%;
+}
+
+#zipCode:hover, input[type=text]:hover {
+    background: lightblue;
+    border: 2px solid #4e7d9a;
+}
+
+#zipCode:focus, input[type=text]:focus {
+    background: lightyellow;
+    border: 2px solid #4e7d9a;
+}
+
+
+/**********
+Newsletter
+**********/
+
+.newsletter {
+    margin: 5px auto 0 auto;
+    padding: 0;
+    width: 272px;
+}
+
+.newsletter legend {
+    font-size: 18px;
+    padding-top: 40px;
+}
+
+.newsletter p {
+    font-size: 1em;
+}
+
+.newsletter span {
+    color: #577081;
+    font-size: 1em;
+    line-height: 2;
+    padding-left: 10px;
+}
+
+input[type="text"], textarea {
+    background: #eff0f1;
+    border-radius: 10px;
+    border: 2px solid #eff0f1;
+    font-size: .95em;
+    outline: none;
+}
+
+input[type=text]:hover, textarea:hover {
+    background: lightblue;
+    border: 2px solid #4e7d9a;
+}
+
+input[type=text]:focus, textarea:focus {
+    background: lightyellow;
+    border: 2px solid #4e7d9a;
+}
+
+.message768 {
+    display: none;
+}
+
+.button {
+    background: #00d2c7;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    display: inline-block;
+    margin-top: 30px;
+    outline: none;
+    padding: 20px 32px;
+    text-align: center;
+    text-decoration: none;
+    width: 272px;
+}
+
+.button:hover {
+    background: lightyellow;
+    color: #00d2c7;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/*********
+Copyright
+********/
+
+.copyright {
+    color: #a3a9ae;
+    font-size: 1em;
+    font-style: italic;
+    margin-bottom: 250px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+
+/********** MIN-WIDTH 768 (Tablet & Desktop) **********/
+
+@media screen and (min-width: 768px) {
+    /**********
+    Newsletter
+    **********/
+    .signupPitch {
+        width: 499.2px;
+    }
+    /**********
+    Contact Info
+    **********/
+    .contactInfo {
+        border-bottom: 2px solid #000;
+        width: 499.2px;
+    }
+    .block label {
+        display: inline-block;
+        text-align: right;
+        width: 140px;
+    }
+    #fullName, input[type="text"], select {
+        width: 71.5%;
+        padding-left: 40px;
+    }
+    label:nth-of-type(1) {
+        padding-right: 69px;
+    }
+    #email, input[type="email"], select {
+        width: 71%;
+    }
+    label:nth-of-type(2) {
+        padding-right: 42.5px;
+    }
+    #telephone, input[type="tel"], select {
+        width: 71%;
+    }
+    label:nth-of-type(3) {
+        padding-right: 35px;
+    }
+    #streetAdd, input[type="text"], select {
+        width: 71%;
+    }
+    label:nth-of-type(4) {
+        padding-right: 35px;
+    }
+    #city, input[type="text"], select {
+        width: 71%;
+    }
+    label:nth-of-type(5) {
+        padding-right: 110px;
+    }
+    #state, select[name="state"] {
+        width: 71.5%;
+    }
+    label:nth-of-type(6) {
+        padding-right: 100px;
+    }
+    #zipCode, input[type="text"], select {
+        width: 30%;
+    }
+    label:nth-of-type(7) {
+        padding-right: 80px;
+    }
+    /**********
+    Newsletter
+    **********/
+    .newsletter legend {
+        font-size: 18px;
+        padding-top: 40px;
+    }
+    .newsletter {
+        width: 499.2px;
+    }
+    .message320 {
+        display: none;
+    }
+    .message768 {
+        display: block;
+        width: 499.2px;
+    }
+    .button {
+        width: 499.2px;
+    }
+}
